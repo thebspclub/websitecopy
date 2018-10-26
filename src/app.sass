@@ -29,7 +29,7 @@
 @import './modules/sass/typo'
 
 .thebspclub
-  font-family: 'Open Sans', sans-serif
+  font-family: $body-font-family
   font-size: 1.5em
   font-weight: bold
   background-color: $body-background-color
@@ -53,12 +53,14 @@
         background-image: url($header-logo-image)
         background-position: center
         background-repeat: no-repeat
+        background-size: contain
       &__slogan
         width: 346px
         height: 41px
         background-image: url($header-slogan-image)
         background-position: center
         background-repeat: no-repeat
+        background-size: contain
     
   &__main
     padding: 20px
@@ -72,13 +74,37 @@
             background-image: url($main-description-welcome-image)
             background-position: center
             background-repeat: no-repeat
+            background-size: contain
       &__discord
         .discord
           &__widget
             width: 480px
             height: 504px
 
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 480px)
+  .thebspclub
+    &__header
+      padding: 20px 10px
+      .header
+        &__logo
+          width: 240px
+        &__slogan
+          width: 262px
+      .cssgrid
+        &__item
+          justify-self: center !important
+    &__main
+      padding: 20px 10px
+      .main
+        &__description
+          padding: 0
+          font-size: 1.25rem
+        &__discord
+          .discord
+            &__widget
+              width: 100%
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
   .thebspclub
     &__header
       .header
@@ -89,6 +115,8 @@
           justify-self: center !important
     &__main
       .main
+        &__description
+          padding: 0
         &__discord
           .discord
             &__widget
