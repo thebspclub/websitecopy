@@ -1,14 +1,17 @@
-# Yet Another And Really Basic Webpack ES6 Starterkit
+# The BSP Club Landing Page
 
-A lightweight foundation for any Webpack 4 based frontend project, mainly inspired by [WBKD's Webpack Frontend Starterkit](https://github.com/wbkd/webpack-starter). 
+Source files of the generated [The BSP Club landing page](https://thebspclub.neocities.org/).
+
+* Design by sprt#6897 (Discord user)
+* Code by [Jonathan Linat](https://github.com/jonathanlinat/)
 
 ## Installation
 
 Clone this repository locally...
 
 ```
-$ git clone https://github.com/jonathanlinat/yet-another-and-really-basic-webpack-es6-starterkit.git
-$ cd yet-another-and-really-basic-webpack-es6-starterkit/
+$ git clone https://github.com/jonathanlinat/thebspclub-landingpage.git
+$ cd thebspclub-landingpage/
 ```
 
 ...and install the required NPM packages.

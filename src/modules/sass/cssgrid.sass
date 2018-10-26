@@ -22,7 +22,11 @@
  * SOFTWARE.
  */
 
-$body-color: #fff
-$body-background-color: #333
+.cssgrid
+  &__wrapper
+    display: grid
+    grid-template-columns: auto auto
 
-$featured-text: #f04640
+  @media only screen and (max-width: 768px)
+    &__wrapper
+      grid-template-columns: auto

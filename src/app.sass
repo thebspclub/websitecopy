@@ -22,20 +22,84 @@
  * SOFTWARE.
  */
 
+@import './modules/sass/base64'
 @import './modules/sass/colors'
+@import './modules/sass/cssgrid'
+@import './modules/sass/reset'
+@import './modules/sass/typo'
 
-html, body
-  width: 100%
-  height: 100%
-
-  margin: 0
-  padding: 0
-
-body
-  display: flex
-  flex-direction: column
-  justify-content: center
-  text-align: center
-
-  color: $body-color
+.thebspclub
+  font-family: 'Open Sans', sans-serif
+  font-size: 1.5em
+  font-weight: bold
   background-color: $body-background-color
+  background-image: url($thebspclub-background-image)
+  background-position: center
+  background-repeat: no-repeat
+  color: $body-color
+
+  &__header
+    padding: 20px
+    border-bottom: 8px solid $featured-text
+    .cssgrid
+      &__item
+        align-self: center
+        &:nth-child(2)
+          justify-self: end
+    .header
+      &__logo
+        width: 324px
+        height: 61px
+        background-image: url($header-logo-image)
+        background-position: center
+        background-repeat: no-repeat
+      &__slogan
+        width: 346px
+        height: 41px
+        background-image: url($header-slogan-image)
+        background-position: center
+        background-repeat: no-repeat
+    
+  &__main
+    padding: 20px
+    .main
+      &__description
+        padding-right: 20px
+        .description
+          &__welcome
+            width: 158px
+            height: 36px
+            background-image: url($main-description-welcome-image)
+            background-position: center
+            background-repeat: no-repeat
+      &__discord
+        .discord
+          &__widget
+            width: 480px
+            height: 504px
+
+@media only screen and (max-width: 768px)
+  .thebspclub
+    &__header
+      .header
+          &__logo
+            margin-bottom: 10px
+      .cssgrid
+        &__item
+          justify-self: center !important
+    &__main
+      .main
+        &__discord
+          .discord
+            &__widget
+              width: 100%
+
+@media only screen and (min-width: 769px) and (max-width: 960px)
+  .thebspclub
+    &__main
+      .main
+        &__discord
+          .discord
+            &__widget
+              width: 320px
+              height: 664px

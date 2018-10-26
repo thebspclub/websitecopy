@@ -22,13 +22,7 @@
  * SOFTWARE.
  */
 
-import log from './modules/js/log'
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
 
-if (module.hot) module.hot.accept()
-
-const yo = Symbol('')
-
-// eslint-disable-next-line
-String.prototype[yo] = () => 'Yo 👋'
-
-log(''[yo]())
+.featured-text
+  color: $featured-text

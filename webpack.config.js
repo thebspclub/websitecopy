@@ -9,14 +9,12 @@ const webpack = require('webpack')
 module.exports = (env, options) => {
   const isProductionMode = (options.mode === 'production')
 
-  const src = path.resolve('./src')
-  const dist = path.resolve('./dist')
+  const src = path.resolve(__dirname, './src')
+  const dist = path.resolve(__dirname, './dist')
 
   let webpackConfig = {
     entry: {
       app: [
-        'babel-polyfill',
-        src + '/app.js',
         src + '/app.sass',
         src + '/index.html'
       ]
@@ -81,7 +79,6 @@ module.exports = (env, options) => {
           cache: true,
           minify: {
             html5: true,
-            collapseInlineTagWhitespace: true,
             collapseWhitespace: true,
             decodeEntities: true,
             removeAttributeQuotes: true,
